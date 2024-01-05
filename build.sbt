@@ -28,7 +28,7 @@ scalacOptions ++= {
   if (isScala3.value)
     Seq("-Xtarget:17")
   else
-    Seq("-target:jvm-17")
+    Seq("-release:17")
 } ++ Seq("-deprecation", "-feature")
 javacOptions ++= Seq("-source", "17", "-target", "17")
 
