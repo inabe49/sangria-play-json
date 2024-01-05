@@ -17,6 +17,7 @@ licenses := Seq(
 
 ThisBuild / crossScalaVersions := Seq("2.13.12", "3.3.1")
 ThisBuild / scalaVersion := crossScalaVersions.value.last
+ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("17"), JavaSpec.temurin("11"))
 ThisBuild / githubWorkflowPublishTargetBranches := List()
 ThisBuild / githubWorkflowBuildPreamble ++= List(
   WorkflowStep.Sbt(List("mimaReportBinaryIssues"), name = Some("Check binary compatibility")),
